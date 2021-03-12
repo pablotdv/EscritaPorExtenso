@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal abstract class Classe
+    public abstract class Classe
     {
-        abstract internal string Sufixo { get; }
+        abstract public string Sufixo { get; }
         virtual protected Classe ClasseAnterior { get; set; }
         protected Ordem Ordem { get; set; }
         internal int[] Algarismos { get { return Ordem.Algarismos; } }

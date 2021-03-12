@@ -1,18 +1,18 @@
 using EscritaPorExtenso.Core;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EscritaPorExtenso.Testes.Ordens
 {
-    [TestFixture]
+    [TestClass]
     public class TesteDeDezena
     {
-        [Test]
+        [TestMethod]
         public void DeveGerarNumeroDeUmaDezenaSimples()
         {
             Assert.AreEqual("dez", new Dezena(1).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeveGerarUmaDezenaDaPrimeiraDezena()
         {
             Assert.AreEqual("onze", new Dezena(1, new Unidade(1)).ToString());
@@ -22,7 +22,7 @@ namespace EscritaPorExtenso.Testes.Ordens
             Assert.AreEqual("dezenove", new Dezena(1, new Unidade(9)).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeveGerarUmaDezenaQualquer()
         {
             Assert.AreEqual("vinte e um", new Dezena(2, new Unidade(1)).ToString());

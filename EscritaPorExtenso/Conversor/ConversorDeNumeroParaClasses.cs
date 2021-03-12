@@ -5,7 +5,7 @@ using EscritaPorExtenso.Helpers;
 
 namespace EscritaPorExtenso.Conversor
 {
-    internal class ConversorDeNumeroParaClasses
+    public class ConversorDeNumeroParaClasses
     {
         public static int NumeroDeClasses { get { return _classes.Length; } }
         private static readonly Type[] _ordens = { typeof(Unidade), typeof(Dezena), typeof(Centena) };

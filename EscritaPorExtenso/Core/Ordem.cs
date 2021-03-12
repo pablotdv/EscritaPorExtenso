@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal abstract class Ordem
+    public abstract class Ordem
     {
         protected Ordem OrdemAnterior { get; set; }
         protected int Algarismo { get; set; }

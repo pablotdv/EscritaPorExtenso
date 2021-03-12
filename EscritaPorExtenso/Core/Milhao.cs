@@ -2,9 +2,9 @@
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Milhao : Classe
+    public class Milhao : Classe
     {
-        internal override string Sufixo { get { return EhSingular ? "milhão" : "milhões"; } }
+        public override string Sufixo { get { return EhSingular ? "milhão" : "milhões"; } }
 
         public Milhao(Ordem ordem, Classe classeAnterior = null)
         {

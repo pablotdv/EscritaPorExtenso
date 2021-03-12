@@ -1,39 +1,40 @@
 ﻿using EscritaPorExtenso.Core;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EscritaPorExtenso.Testes.Classes
 {
-    [TestFixture]
+    [TestClass]
     public class TesteDeMilhao
     {
-        [TestCase("um milhão", 1)]
-        [TestCase("cinco milhões", 5)]
-        [TestCase("nove milhões", 9)]
+        [DataTestMethod]
+        [DataRow("um milhão", 1)]
+        [DataRow("cinco milhões", 5)]
+        [DataRow("nove milhões", 9)]
         public void DeveEscreverPorExtensoUnidadeDeMilhao(string numeroPorExtenso, int unidade)
         {
             Assert.AreEqual(numeroPorExtenso, new Milhao(new Unidade(unidade)).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void ObjetosDiferentesDevemSerDiferentes()
         {
             Assert.IsFalse(new Milhao(new Unidade(1)).Equals(1));
         }
 
-        [Test]
+        [TestMethod]
         public void DeveSerDiferenteSeObjetoForNulo()
         {
             Assert.IsFalse(new Milhao(new Unidade(1)).Equals(null));
         }
 
-        [Test]
+        [TestMethod]
         public void DeveSerIgual()
         {
             var milhao = new Milhao(new Unidade(1));
             Assert.IsTrue(new Milhao(new Unidade(1)).Equals(milhao));
         }
 
-        [Test]
+        [TestMethod]
         public void HashcodeDaClasseDeveSerONumeroPorExtenso()
         {
             var umMilhao = new Milhao(new Unidade(1));
@@ -41,27 +42,28 @@ namespace EscritaPorExtenso.Testes.Classes
             Assert.AreEqual(umMilhao.GetHashCode(), umMilhao.ToString().GetHashCode());
         }
 
-        [TestCase("dez milhões", 1)]
-        [TestCase("vinte milhões", 2)]
-        [TestCase("noventa milhões", 9)]
+        [DataTestMethod]
+        [DataRow("dez milhões", 1)]
+        [DataRow("vinte milhões", 2)]
+        [DataRow("noventa milhões", 9)]
         public void DeveEscreverPorExtensoDezenaDeMilhao(string numeroPorExtenso, int dezena)
         {
             Assert.AreEqual(numeroPorExtenso, new Milhao(new Dezena(dezena)).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeveGerarNumeroUmMilhaoECemMil()
         {
             Assert.AreEqual("um milhão e cem mil", new Milhao(new Unidade(1), new Milhar(new Centena(1))).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeveGerarNumeroUmMilhaoECemMilEUm()
         {
             Assert.AreEqual("um milhão e cem mil e um", new Milhao(new Unidade(1), new Milhar(new Centena(1), new PrimeiraClasse(new Unidade(1)))).ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeveGerarNumero1111e3()
         {
             Assert.AreEqual("um milhão, cento e onze mil", new Milhao(new Unidade(1), new Milhar(new Centena(1, new Dezena(1, new Unidade(1))))).ToString());

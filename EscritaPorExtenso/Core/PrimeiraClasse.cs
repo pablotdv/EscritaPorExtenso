@@ -1,8 +1,8 @@
 namespace EscritaPorExtenso.Core
 {
-    internal class PrimeiraClasse : Classe
+    public class PrimeiraClasse : Classe
     {
-        internal override string Sufixo { get { return string.Empty; }}
+        public override string Sufixo { get { return string.Empty; }}
 
         public PrimeiraClasse(Ordem ordem, Classe classeAnterior = null)
         {

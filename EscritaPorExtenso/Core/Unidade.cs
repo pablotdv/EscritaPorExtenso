@@ -2,7 +2,7 @@
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Unidade : Ordem
+    public class Unidade : Ordem
     {
 
         private static readonly Dictionary<int, string> _nomeDosAlgarismos = new Dictionary<int, string>()

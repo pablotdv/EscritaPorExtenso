@@ -1,54 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C166C8C6-7CD1-4248-B190-58642BF691E3}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>EscritaPorExtenso</RootNamespace>
-    <AssemblyName>EscritaPorExtenso</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Compile Include="Core\Ordem.cs" />
-    <Compile Include="Extensoes\ExtensoesDeNumerosInteiros.cs" />
-    <Compile Include="Extensoes\ExtensoesDePorcentagem.cs" />
-    <Compile Include="Porcentagem\Porcentagem.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Core\Centena.cs" />
-    <Compile Include="Core\Dezena.cs" />
-    <Compile Include="Core\Milhao.cs" />
-    <Compile Include="Core\Milhar.cs" />
-    <Compile Include="Core\PrimeiraClasse.cs" />
-    <Compile Include="Core\Unidade.cs" />
-    <Compile Include="Conversor\ConversorDeNumeroParaClasses.cs" />
-    <Compile Include="Helpers\ExtensoesDeString.cs" />
-    <Compile Include="Helpers\ExtensoesDeType.cs" />
-    <Compile Include="Moeda\Real.cs" />
-    <Compile Include="Extensoes\ExtensoesDeMoeda.cs" />
-    <Compile Include="Core\Classe.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
+
 </Project>

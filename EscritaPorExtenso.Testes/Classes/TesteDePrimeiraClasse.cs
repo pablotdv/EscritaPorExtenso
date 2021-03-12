@@ -1,16 +1,15 @@
-﻿using System;
-using NUnit.Framework;
-using EscritaPorExtenso.Core;
+﻿using EscritaPorExtenso.Core;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EscritaPorExtenso.Testes
 {
-    [TestFixture]
+    [TestClass]
     public class TesteDePrimeiraClasse
     {
-        [Test]
+        [TestMethod]
         public void PrimeiraClasseNaoTemSufixo()
         {
-            Assert.IsEmpty(new PrimeiraClasse(new Unidade(1)).Sufixo);
+            Assert.AreEqual("", new PrimeiraClasse(new Unidade(1)).Sufixo);
         }
     }
 }

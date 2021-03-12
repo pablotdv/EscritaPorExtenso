@@ -2,9 +2,9 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Milhar : Classe
+    public class Milhar : Classe
     {
-        internal override string Sufixo { get { return "mil"; } }
+        public override string Sufixo { get { return "mil"; } }
 
         public Milhar(Ordem ordem, Classe classeAnterior = null)
         {

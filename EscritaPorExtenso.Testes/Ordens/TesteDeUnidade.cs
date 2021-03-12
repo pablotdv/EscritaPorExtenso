@@ -1,12 +1,12 @@
 ﻿using EscritaPorExtenso.Core;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EscritaPorExtenso.Testes.Ordens
 {
-    [TestFixture]
+    [TestClass]
     public class TesteDeUnidade
     {
-        [Test]
+        [TestMethod]
         public void DeveGerarNumeroPorExtensoDeUnidade()
         {
             Assert.AreEqual("um", new Unidade(1).ToString());

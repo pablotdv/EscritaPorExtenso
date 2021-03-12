@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace EscritaPorExtenso.Core
 {
-    internal class Centena : Ordem
+    public class Centena : Ordem
     {
         private static readonly Dictionary<int, string> NomeDosAlgarismos = new Dictionary<int, string>() 
         {
